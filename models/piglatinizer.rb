@@ -1,9 +1,4 @@
 class PigLatinizer
-  attr_accessor :user_phrase
-
-  def initialize
-
-  end
 
   def piglatinize(input)
     if input.scan(/^[aeiou]/)
@@ -12,4 +7,4 @@ class PigLatinizer
       input + "ay"
     end
   end
-end 
+end
