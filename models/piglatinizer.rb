@@ -8,7 +8,8 @@ class PigLatinizer
     elsif input.match?(/^[^aeiou]{2}/)
       input + "ay"
     elsif input.match?(/^[^aeiou]/)
-      input + "ay"
+      array = input.split
+      array[1..-1].join + array[0] + "ay"
     end
   end
 end
