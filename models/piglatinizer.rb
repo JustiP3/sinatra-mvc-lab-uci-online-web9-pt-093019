@@ -5,9 +5,9 @@ class PigLatinizer
     words = input.split(" ")
     words.each do |word|
     pig_latin << helper(word)
-    end 
+    end
 
-    pig_latin.join(" ")    
+    pig_latin.join(" ")
   end
 
   def helper(input)
@@ -23,5 +23,5 @@ class PigLatinizer
       array = input.split(//)
       new_word = array[1..-1].join + array[0] + "ay"
     end
-  end 
+  end
 end
