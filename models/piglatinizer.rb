@@ -1,9 +1,13 @@
 class PigLatinizer
 
   def piglatinize(input)
-    if input.scan(/^[aeiou]/)
+    if input.match?(/^[aeiou]/)
       input + "way"
-    elsif input.scan(/^[^aeiou]{2}/)
+    elsif input.match?(/^[^aeiou]{3}/)
+      input + "ay"
+    elsif input.match?(/^[^aeiou]{2}/)
+      input + "ay"
+    elsif input.match?(/^[^aeiou]/)
       input + "ay"
     end
   end
