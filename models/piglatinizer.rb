@@ -1,6 +1,16 @@
 class PigLatinizer
 
   def piglatinize(input)
+    pig_latin = []
+    words = input.split(" ")
+    words.each do |word|
+    pig_latin << helper(word)
+    end 
+
+    pig_latin.join(" ")    
+  end
+
+  def helper(input)
     if input.match?(/^[aeiouAEIOU]/)
       input + "way"
     elsif input.match?(/^[^aeiouAEIOU]{3}/)
@@ -13,5 +23,5 @@ class PigLatinizer
       array = input.split(//)
       new_word = array[1..-1].join + array[0] + "ay"
     end
-  end
+  end 
 end
